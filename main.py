@@ -17,6 +17,7 @@ from tools.func import (
     select_comparison,
 )
 from tools.classes import DatasetSave
+from visualization import sales_vis
 
 # variables
 GO_BACK_OPTION = 0
@@ -61,13 +62,14 @@ def prepare_data() -> None:
 def select_analysis() -> int:
     "select analysis before select sub_analysis"
 
-    analysis = [
+    analysis = [  # list of analysis
         "Stats_analysis",
         "Sales_analysis",
         "Genre_analysis",
         "Platform_analysis",
         "Year_analysis",
-    ]  # list of analysis
+        "Visualization",
+    ]
     return select_item(analysis, GO_BACK_OPTION + 1, "select of analysis option ... ")
 
 
@@ -91,6 +93,16 @@ def select_sub_analysis(analysis: int) -> dict:
         ],
         [
             "Total Sales, Count, Mean sales by Year release",
+        ],
+        [
+            "Top 10 Best-Selling Games",
+            "Sales by Genre",
+            "Sales by Platform",
+            "Yearly Sales Trend",
+            "Regional Sales Comparison",
+            "Genre Sales by Region",
+            "Platform Sales by Region",
+            "Sales Distribution",
         ],
     ]
 
@@ -133,6 +145,16 @@ def preform(analysis: int, sub_analysis: int) -> None:
         ],
         [
             lambda: year.year_analysis(sales_field=field_sales_select()),
+        ],
+        [
+            lambda: sales_vis.top_selling_vis(),
+            "Sales by Genre",  # should replace with func
+            "Sales by Platform",  # should replace with func
+            "Yearly Sales Trend",  # should replace with func
+            "Regional Sales Comparison",  # should replace with func
+            "Genre Sales by Region",  # should replace with func
+            "Platform Sales by Region",  # should replace with func
+            "Sales Distribution",  # should replace with func
         ],
     ]
 
