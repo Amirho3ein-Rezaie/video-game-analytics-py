@@ -151,7 +151,7 @@ def preform(analysis: int, sub_analysis: int) -> None:
             "Sales by Genre",  # should replace with func
             "Sales by Platform",  # should replace with func
             "Yearly Sales Trend",  # should replace with func
-            "Regional Sales Comparison",  # should replace with func
+            lambda: sales_vis.regional_sales_comparison_vis(),
             "Genre Sales by Region",  # should replace with func
             "Platform Sales by Region",  # should replace with func
             "Sales Distribution",  # should replace with func

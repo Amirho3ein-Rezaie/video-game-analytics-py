@@ -1,22 +1,45 @@
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as plot
 from analysis import sales
+from numpy import array
 
 
-def top_selling_vis(file: bool = False) -> None:
+def top_selling_vis() -> None:
     "Visualizatio the top selling Global"
 
     dataframe = sales.top_salling(False)
 
     top = dataframe.head(10)
 
-    plt.figure(figsize=(10, 6))
-    bars = plt.barh(top["Name"], top["Global_Sales"])
-    plt.bar_label(bars, fmt="{:.2f}", padding=3)
+    plot.figure(figsize=(10, 6))
+    bars = plot.barh(top["Name"], top["Global_Sales"])
+    plot.bar_label(bars, fmt="{:.2f}", padding=3)
 
-    plt.title("Top 10 best-selling games")
-    plt.xlabel("Global sales (millions)")
-    plt.ylabel("Game")
+    plot.title("Top 10 best-selling games")
+    plot.xlabel("Global sales (millions)")
+    plot.ylabel("Game")
 
-    plt.gca().invert_yaxis()
-    plt.tight_layout()
-    plt.show()
+    plot.gca().invert_yaxis()
+    plot.tight_layout()
+    plot.show()
+
+
+def regional_sales_comparison_vis() -> None:
+    "Visualize total sales across different regions."
+
+    dataframe = sales.regional_sales_comparison(False)
+
+    # basic plot
+    x = array(dataframe["Field name"])
+    y = array(dataframe["Total selling (copy)"])
+    plot.bar(x, y, 0.5)
+
+    # make better the appearance
+    plot.title("Regional Sales Comparison", fontsize=16)
+    plot.xlabel("Regions")
+    plot.ylabel("Total Sales (Units)")
+
+    plot.grid(axis="y")
+
+    plot.show()  # show the plot
+
+    print("The plot was displayed successfully ... !")
