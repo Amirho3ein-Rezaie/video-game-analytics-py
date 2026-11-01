@@ -153,7 +153,7 @@ def preform(analysis: int, sub_analysis: int) -> None:
             "Yearly Sales Trend",  # should replace with func
             lambda: sales_vis.regional_sales_comparison_vis(),
             lambda: group_vis.genre_analysis_vis(sales_field=field_sales_select()),
-            "Platform Sales by Region",  # should replace with func
+            lambda: group_vis.platform_analysis_vis(sales_field=field_sales_select()),
             "Sales Distribution",  # should replace with func
         ],
     ]

@@ -41,3 +41,10 @@ def genre_analysis_vis(sales_field) -> None:
 
     # use the function that show the plot
     group_analysis_vis(DatasetFields.GroupByFields.Genre.value, sales_field)
+
+
+def platform_analysis_vis(sales_field) -> None:
+    "Visual the dataframe that includes the data of platform"
+
+    # use the function that show the plot
+    group_analysis_vis(DatasetFields.GroupByFields.Platform.value, sales_field)
