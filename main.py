@@ -102,7 +102,6 @@ def select_sub_analysis(analysis: int) -> dict:
             "Regional Sales Comparison",
             "Genre Sales by Region",
             "Platform Sales by Region",
-            "Sales Distribution",
         ],
     ]
 
@@ -154,7 +153,6 @@ def preform(analysis: int, sub_analysis: int) -> None:
             lambda: sales_vis.regional_sales_comparison_vis(),
             lambda: group_vis.genre_analysis_vis(sales_field=field_sales_select()),
             lambda: group_vis.platform_analysis_vis(sales_field=field_sales_select()),
-            "Sales Distribution",  # should replace with func
         ],
     ]
 
