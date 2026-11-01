@@ -17,7 +17,7 @@ from tools.func import (
     select_comparison,
 )
 from tools.classes import DatasetSave
-from visualization import sales_vis
+from visualization import group_vis, sales_vis
 
 # variables
 GO_BACK_OPTION = 0
@@ -152,7 +152,7 @@ def preform(analysis: int, sub_analysis: int) -> None:
             "Sales by Platform",  # should replace with func
             "Yearly Sales Trend",  # should replace with func
             lambda: sales_vis.regional_sales_comparison_vis(),
-            "Genre Sales by Region",  # should replace with func
+            lambda: group_vis.genre_analysis_vis(sales_field=field_sales_select()),
             "Platform Sales by Region",  # should replace with func
             "Sales Distribution",  # should replace with func
         ],
