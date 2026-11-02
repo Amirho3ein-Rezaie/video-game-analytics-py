@@ -48,3 +48,10 @@ def platform_analysis_vis(sales_field) -> None:
 
     # use the function that show the plot
     group_analysis_vis(DatasetFields.GroupByFields.Platform.value, sales_field)
+
+
+def year_analysis_vis(sales_field) -> None:
+    "Visual the dataframe that includes the data of year"
+
+    # use the function that show the plot
+    group_analysis_vis(DatasetFields.GroupByFields.Year.value, sales_field)
