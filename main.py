@@ -155,7 +155,10 @@ def preform(analysis: int, sub_analysis: int) -> None:
     # run
     splitter()
 
-    funcs[analysis - 1][sub_analysis - 1]()
+    try:
+        funcs[analysis - 1][sub_analysis - 1]()
+    except TypeError as e:
+        print(f"Error in running the option's function -> {e}")
 
     splitter()
 
