@@ -22,6 +22,8 @@ def top_selling_vis() -> None:
     plot.tight_layout()
     plot.show()
 
+    print("The plot was displayed successfully ... !")
+
 
 def regional_sales_comparison_vis() -> None:
     "Visualize total sales across different regions."
