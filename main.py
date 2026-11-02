@@ -96,8 +96,6 @@ def select_sub_analysis(analysis: int) -> dict:
         ],
         [
             "Top 10 Best-Selling Games",
-            "Sales by Genre",
-            "Sales by Platform",
             "Yearly Sales Trend",
             "Regional Sales Comparison",
             "Genre Sales by Region",
@@ -147,8 +145,6 @@ def preform(analysis: int, sub_analysis: int) -> None:
         ],
         [
             lambda: sales_vis.top_selling_vis(),
-            "Sales by Genre",  # should replace with func
-            "Sales by Platform",  # should replace with func
             "Yearly Sales Trend",  # should replace with func
             lambda: sales_vis.regional_sales_comparison_vis(),
             lambda: group_vis.genre_analysis_vis(sales_field=field_sales_select()),
