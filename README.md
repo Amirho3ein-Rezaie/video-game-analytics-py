@@ -36,6 +36,16 @@ video-game-analytics-py/
 ├── main.py
 └── requirements.txt
 ```
+## 🖼️ Screenshots
+
+### Main Menu
+![main menu](documents/images/menu.png)
+
+### Top Selling games in global
+![Top Selling](documents/images/top-selling.png)
+
+### Sales statistics by genre
+![Sales of genre](documents/images/sales-genre.png)
 
 ## 🚀 Run
 
