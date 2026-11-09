@@ -38,13 +38,13 @@ video-game-analytics-py/
 ```
 ## 🖼️ Screenshots
 
-### Main Menu
+### Main Menu 📝
 ![main menu](documents/images/menu.png)
 
-### Top Selling games in global
+### Top Selling games in global 🔝
 ![Top Selling](documents/images/top-selling.png)
 
-### Sales statistics by genre
+### Sales statistics by genre 📈
 ![Sales of genre](documents/images/sales-genre.png)
 
 ## 🚀 Run
